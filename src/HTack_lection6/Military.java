@@ -1,10 +1,9 @@
 package HTack_lection6;
 
-public class Military extends Air {
+public class Military extends AirTransport {
     boolean catapult = true;
     int rockets;
     double answer;
-    int checkRockets = 36;
     String halk = "OH, NO!!!HAAAAALK!!!";
 
     void getInfoMilitary(boolean catapult, int rockets) {
@@ -14,7 +13,7 @@ public class Military extends Air {
 
     public void description() {
         System.out.println("[ Wingspan: " + this.wingspan);
-        System.out.println("Minimum runway length" + this.minRunwayLength);
+        System.out.println("Minimum runway length " + this.minRunwayLength);
         System.out.println("Weight: " + this.weight);
         System.out.println("Power: " + this.power);
         System.out.println("Maximum speed: " + this.maxSpeed);
@@ -22,7 +21,7 @@ public class Military extends Air {
         System.out.println("Passengers: " + this.catapult);
         System.out.println("Business class: " + this.rockets);
         System.out.println("Power in kilowatts: " + this.answer + " ]");
-        System.out.println(shot(this.checkRockets));
+        System.out.println(shot(this.rockets));
         System.out.println("System of catapult: " + checkingCatapult(this.catapult));
         System.out.println(this.halk +"\n" + attackHalk(this.catapult));
     }
@@ -30,31 +29,25 @@ public class Military extends Air {
         answer = 0.74 * power;
 
     }
-    private String shot(int checkRockets) {
-        String answer2;
-        if (checkRockets != 0) {
-            answer2 = "The rocket went!";
+    private String shot(int rockets) {
+        if (rockets != 0) {
+            return  "The rocket went!";
         } else {
-            answer2 = "There is no ammunition";
+            return "There is no ammunition";
         }
-        return answer2;
     }
     private String checkingCatapult(boolean catapult){
-        String answer3;
         if(catapult != false) {
-            answer3 = "The ejection was successful\n";
+            return "The ejection was successful";
         } else {
-            answer3 = "You don't have such a system\n";
+            return  "You don't have such a system";
         }
-        return answer3;
     }
     private String attackHalk(boolean catapult){
-        String answer4;
         if(!catapult){
-            answer4 = "You died!!! You were attacked by the Halk\n";
+          return  "You died!!! You were attacked by the Halk";
         }else {
-            answer4 = "You successfully ejected! The Halk didn't get you!\n";
+            return  "You successfully ejected! The Halk didn't get you!\n";
         }
-        return answer4;
     }
 }

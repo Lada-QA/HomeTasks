@@ -6,7 +6,7 @@ public abstract class Transport {
     int maxSpeed;
     String mark;
 
-   public void getInfo(int power, int maxSpeed, String mark, int weight) {
+   public void Transport(int power, int maxSpeed, String mark, int weight) {
         this.power = power;
         this.weight = weight;
         this.maxSpeed = maxSpeed;

@@ -6,7 +6,7 @@ public class Passenger extends Ground {
     double answer;
     double kilometers;
     int time = 2;
-       public void getInfoPassenger(String bodyType, int passengers) {
+       public void Passenger(String bodyType, int passengers) {
            this.bodyType = bodyType;
            this.passengers = passengers;
     }

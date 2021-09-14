@@ -5,7 +5,7 @@ public class Cargo extends Ground {
     double answer;
     int checking = 40000;
 
-    void getInfoCargo(int loadCapacity) {
+    void Cargo(int loadCapacity) {
         this.loadCapacity = loadCapacity;
     }
     void description() {
@@ -23,13 +23,10 @@ public class Cargo extends Ground {
         answer = 0.74 * power;
     }
     private String checkingCapacity(int checking) {
-        String answer1;
         if (checking == loadCapacity) {
-            answer1 = "Your truck is loaded";
+            return "Your truck is loaded";
         } else {
-            answer1 = "You need a bigger truck";
+            return "You need a bigger truck";
         }
-        return answer1;
     }
-
 }
